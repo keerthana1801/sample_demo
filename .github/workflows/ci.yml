@@ -9,7 +9,6 @@ on:
       - main
       - master
       - develop
-      
 jobs:
   flutter_test:
     name: Run flutter test and analyze
