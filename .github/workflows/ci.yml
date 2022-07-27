@@ -36,11 +36,11 @@ jobs:
       - run: flutter doctor    
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter build ios --release --no-codesign
-      - uses: actions/upload-artifact@v3
-        with: 
-          name: sample-ios
-          path: build/app/outputs/ipa/release/sample-ios.ipa
+      - run: flutter build ipa
+      # - uses: actions/upload-artifact@v3
+      #   with: 
+      #     name: sample-ios
+      #     path: 
 
   build_apkbundle:
     name: Build Flutter (Android)
@@ -58,7 +58,7 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build apk
-      - uses: actions/upload-artifact@v3
-        with: 
-          name: sample-android
-          path: build/app/outputs/apk/release/sample-android.apk
+      # - uses: actions/upload-artifact@v3
+      #   with: 
+      #     name: sample-android
+      #     path: build/app/outputs/apk/release/sample-android.apk
