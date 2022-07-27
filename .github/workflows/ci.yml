@@ -36,7 +36,7 @@ jobs:
       - run: flutter doctor    
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter build ios --debug
+      - run: flutter build ios --release --no-codesign
       - uses: actions/upload-artifact@v3
         with: 
           name: sample-ios
