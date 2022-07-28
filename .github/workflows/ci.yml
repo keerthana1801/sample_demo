@@ -41,7 +41,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with: 
           name: sample-android
-          path: build/app/outputs/flutter-apk/app-release
+          path: build/app/outputs/flutter-apk/app-release.apk
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1.3.4
         with:
