@@ -24,8 +24,7 @@ jobs:
       - run: flutter doctor    
       - run: flutter pub get
       - run: flutter clean
-      - run:
-          flutter build ios --no-codesign
+      - run: flutter build ios --no-codesign
           cd build/ios/iphoneos
           mkdir Payload
           cd Payload
