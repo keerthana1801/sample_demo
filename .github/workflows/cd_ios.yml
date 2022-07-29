@@ -24,7 +24,8 @@ jobs:
       - run: flutter doctor    
       - run: flutter pub get
       - run: flutter clean
-      - run: flutter build ios --no-codesign
+      - run: |
+          flutter build ios --no-codesign
           cd build/ios/iphoneos
           mkdir Payload
           cd Payload
@@ -32,13 +33,11 @@ jobs:
           cd ..
           zip -r app.ipa Payload
       - name: Push to Releases
-        uses: ncipollo/release-action@v1
+        uses: ncipollo/release-action@v2
         with:
-          artifacts: build/ios/iphoneos/app.ipa
+          artifacts: "build/ios/iphoneos/app.ipa"
           tag: v1.0.${{ github.run_number }}
           token: ${{ secrets.TOKEN }}
-
-  
   
 
 
