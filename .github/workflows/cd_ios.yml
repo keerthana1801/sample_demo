@@ -1,13 +1,12 @@
 on:
   pull_request:
     branches:
-      - main
       - master
   push:
     branches:
       - master
 name: "Build & Release"
-jobs:
+jobs:s
   build_ios:
     name: Build Flutter (iOS)
     runs-on: macos-latests
